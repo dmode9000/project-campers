@@ -70,9 +70,7 @@ body {
   background: var(--color-white);
 }
 
-main {
-  min-height: 100vh;
-}
+main {}
 
 input,
 textarea {
