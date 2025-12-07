@@ -1,10 +1,13 @@
 'use client';
+
 import { useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
 import styles from './CookieBanner.module.css';
 
 const STORAGE_KEY = 'cookie_consent';
 
 export default function CookieBanner() {
+  const t = useTranslations('CookieBanner');
   const [visible, setVisible] = useState(false);
   const [animate, setAnimate] = useState(false);
 
@@ -33,15 +36,13 @@ export default function CookieBanner() {
 
   return (
     <div className={`${styles.wrapper} ${animate ? styles.show : ''}`}>
-      <div className={styles.text}>
-        Ми використовуємо cookies, щоб покращити ваш досвід. Прийняти cookies?
-      </div>
+      <div className={styles.text}>{t('text')}</div>
       <div className={styles.actions}>
         <button className={`btn-primary ${styles.accept}`} onClick={() => choose('accepted')}>
-          Прийняти
+          {t('accept')}
         </button>
         <button className={`btn-secondary ${styles.decline}`} onClick={() => choose('declined')}>
-          Відхилити
+          {t('decline')}
         </button>
       </div>
     </div>

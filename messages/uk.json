@@ -143,11 +143,6 @@
     "openBot": "Відкрити бота",
     "note": "Після запуску бота статус підключення оновиться автоматично."
   },
-  "CookieBanner": {
-    "text": "Ми використовуємо cookies, щоб покращити ваш досвід. Прийняти cookies?",
-    "accept": "Прийняти",
-    "decline": "Відхилити"
-  },
   "FilterContent": {
     "locationTitle": "Локація",
     "locationPlaceholder": "Місто або область",
@@ -402,5 +397,10 @@
     "delivery": "Доставка",
     "total": "Всього",
     "currency": "грн"
+  },
+  "CookieBanner": {
+    "text": "Ми використовуємо cookies, щоб покращити ваш досвід. Прийняти cookies?",
+    "accept": "Прийняти",
+    "decline": "Відхилити"
   }
 }

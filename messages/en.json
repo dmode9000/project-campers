@@ -143,11 +143,6 @@
     "openBot": "Open bot",
     "note": "After launching the bot, the connection status will update automatically."
   },
-  "CookieBanner": {
-    "text": "We use cookies to improve your experience. Accept cookies?",
-    "accept": "Accept",
-    "decline": "Decline"
-  },
   "FilterContent": {
     "locationTitle": "Location",
     "locationPlaceholder": "City or region",
@@ -408,5 +403,10 @@
     "delivery": "Delivery",
     "total": "Total",
     "currency": "UAH"
+  },
+  "CookieBanner": {
+    "text": "We use cookies to improve your experience. Accept cookies?",
+    "accept": "Accept",
+    "decline": "Decline"
   }
 }

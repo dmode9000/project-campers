@@ -59,8 +59,9 @@ export default function RootLayout({
             <main>{children}</main>
             <ScrollToTopBtn />
           </TanStackProvider>
+          <CookieBanner />
         </NextIntlClientProvider>
-        <CookieBanner />
+
       </body>
     </html>
   );
