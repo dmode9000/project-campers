@@ -47,10 +47,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  modal,
 }: {
   children: React.ReactNode;
-  modal: React.ReactNode;
 }) {
   return (
     <html lang="uk">
@@ -59,9 +57,7 @@ export default function RootLayout({
           <TanStackProvider>
             <Header />
             <main>{children}</main>
-            {modal}
             <ScrollToTopBtn />
-            <div id="modal-root"></div>
           </TanStackProvider>
         </NextIntlClientProvider>
         <CookieBanner />
