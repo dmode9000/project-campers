@@ -23,25 +23,19 @@ export const metadata: Metadata = {
     'TravelTrucks — your go-to service for camper rentals. Browse our wide catalog, book online, and hit the road for your next adventure!',
   openGraph: {
     type: 'website',
-    url: 'https://project-campers.vercel.app',
+    url: 'https://project-campers-l1ck.vercel.app',
     title: 'TravelTrucks - Camper Rental',
     description:
       'TravelTrucks — your go-to service for camper rentals. Browse our wide catalog, book online, and hit the road for your next adventure!',
-    images: [
-      {
-        url: 'https://project-campers.vercel.app/img/hero-camper.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'TravelTrucks - Camper Rental',
-      },
-    ],
+
+    images: ['/opengraph-image'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'TravelTrucks - Camper Rental',
     description:
       'TravelTrucks — your go-to service for camper rentals. Browse our wide catalog, book online, and hit the road for your next adventure!',
-    images: ['https://project-campers.vercel.app/img/hero-camper.jpg'],
+    images: ['/opengraph-image'],
   },
 };
 
