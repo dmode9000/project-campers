@@ -1,0 +1,91 @@
+/* ============================================== */
+/* #region Wrapper                               */
+/* ============================================== */
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  width: 100%;
+}
+
+/* #endregion Wrapper */
+
+/* ============================================== */
+/* #region Loader Grid                           */
+/* ============================================== */
+
+.loader {
+  --cell-size: 52px;
+  --cell-spacing: 1px;
+  --cells: 3;
+  --total-size: calc(var(--cells) * (var(--cell-size) + 2 * var(--cell-spacing)));
+  display: flex;
+  flex-wrap: wrap;
+  width: var(--total-size);
+  height: var(--total-size);
+}
+
+/* #endregion Loader Grid */
+
+/* ============================================== */
+/* #region Cells                                 */
+/* ============================================== */
+
+.cell {
+
+  flex: 0 0 var(--cell-size);
+  margin: var(--cell-spacing);
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 4px;
+  animation: 1.5s ripple ease infinite;
+}
+
+/* --- Animation Delays --- */
+.d-0 {
+  animation-delay: 0ms;
+}
+
+.d-1 {
+  animation-delay: 100ms;
+}
+
+.d-2 {
+  animation-delay: 200ms;
+}
+
+.d-3 {
+  animation-delay: 300ms;
+}
+
+.d-4 {
+  animation-delay: 400ms;
+}
+
+/* #endregion Cells */
+
+/* ============================================== */
+/* #region Animation                             */
+/* ============================================== */
+
+@keyframes ripple {
+  0% {
+    background-color: transparent;
+  }
+
+  10% {
+    background-color: var(--color-cell);
+  }
+
+  20% {
+    background-color: var(--color-cell);
+  }
+
+  30% {
+    background-color: var(--color-cell);
+  }
+}
+
+/* #endregion Animation */

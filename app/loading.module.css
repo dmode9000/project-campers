@@ -1,0 +1,82 @@
+/* #region === Backdrop (Fullscreen Overlay) === */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+/* #endregion */
+
+/* #region === Loader Grid Container === */
+
+.loader {
+    --cell-size: 52px;
+    --cell-spacing: 1px;
+    --cells: 3;
+    --total-size: calc(var(--cells) * (var(--cell-size) + 2 * var(--cell-spacing)));
+    display: flex;
+    flex-wrap: wrap;
+    width: var(--total-size);
+    height: var(--total-size);
+}
+
+/* #endregion */
+
+/* #region === Cell (Individual Grid Item) === */
+
+.cell {
+    flex: 0 0 var(--cell-size);
+    margin: var(--cell-spacing);
+    background-color: transparent;
+    box-sizing: border-box;
+    border-radius: 4px;
+    animation: 1.5s ripple ease infinite;
+}
+
+/* Animation delay modifiers */
+.cell.d-1 {
+    animation-delay: 100ms;
+}
+
+.cell.d-2 {
+    animation-delay: 200ms;
+}
+
+.cell.d-3 {
+    animation-delay: 300ms;
+}
+
+.cell.d-4 {
+    animation-delay: 400ms;
+}
+
+/* #endregion */
+
+/* #region === Animations === */
+
+@keyframes ripple {
+    0% {
+        background-color: transparent;
+    }
+
+    30% {
+        background-color: var(--color-cell);
+    }
+
+    60% {
+        background-color: var(--color-cell);
+    }
+
+    100% {
+        background-color: var(--color-cell);
+    }
+}
+
+/* #endregion */

@@ -1,0 +1,26 @@
+.button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  fill: var(--color-main);
+  transition: all 0.2s ease;
+}
+
+.button {
+  transition: all 0.2s ease;
+}
+
+.buttonActive {
+  fill: var(--color-button);
+}
+
+.button:hover {
+  fill: var(--color-button-hover);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--color-button);
+  outline-offset: 2px;
+}

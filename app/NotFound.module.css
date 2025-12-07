@@ -1,0 +1,166 @@
+/* #region === Animations === */
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float404 {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* #endregion */
+
+/* #region === Wrapper (Main Container) === */
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-gray-light);
+  color: var(--color-main);
+  text-align: center;
+  padding: 24px;
+}
+
+/* #endregion */
+
+/* #region === Content Card === */
+
+.content {
+  background: var(--color-white);
+  padding: 50px 24px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(78, 90, 66, 0.2);
+}
+
+/* #endregion */
+
+/* #region === Error Code (404) === */
+
+.code {
+  font-size: 70px;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1;
+  animation: float404 3s ease-in-out infinite;
+}
+
+/* #endregion */
+
+/* #region === Message Title === */
+
+.message {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* #endregion */
+
+/* #region === Description Text === */
+
+.text {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* #endregion */
+
+/* #region === Button === */
+
+.button {
+  display: block;
+}
+
+/* #endregion */
+
+/* #region === Tablet Responsive (768px+) === */
+
+@media (min-width: 768px) {
+  .content {
+    padding: 60px 32px;
+  }
+
+  .code {
+    font-size: 100px;
+  }
+
+  .message {
+    font-size: 24px;
+    margin-top: 24px;
+  }
+
+  .text {
+    font-size: 16px;
+    margin-top: 16px;
+  }
+
+  .button {
+    margin-top: 24px;
+    font-size: 24px;
+  }
+}
+
+/* #endregion */
+
+/* #region === Desktop Responsive (1440px+) === */
+
+@media (min-width: 1440px) {
+  .content {
+    padding: 60px 32px;
+  }
+
+  .code {
+    font-size: 132px;
+  }
+
+  .message {
+    font-size: 32px;
+    margin-top: 32px;
+  }
+
+  .text {
+    font-size: 24px;
+    margin-top: 24px;
+  }
+
+  .button {
+    margin-top: 42px;
+    font-size: 24px;
+    padding: 12px 24px;
+  }
+}
+
+/* #endregion */

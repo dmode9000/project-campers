@@ -1,0 +1,89 @@
+/* #region === Header Section (Title + Clear Button) === */
+.filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+/* Title */
+.filter {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+}
+
+/* Clear all button */
+.button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 16px;
+  background: transparent;
+  line-height: 150%;
+  color: var(--color-neutral-darkest);
+}
+
+/* #endregion */
+
+/* #region === Results Counter === */
+.shown {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  margin-bottom: 8px;
+}
+
+/* #endregion */
+
+/* #region === Filter Dropdown === */
+
+/* Wrapper to reserve space for absolute positioned dropdown */
+.filterWrapper {
+  position: relative;
+  min-height: 40px;
+  margin-bottom: 32px;
+}
+
+/* Dropdown container */
+.filterDropdownContainer {
+  background: var(--color-inputs);
+  border: 1px solid var(--opacity-neutral-darkest-15);
+  border-radius: 16px;
+  width: 100%;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 8px;
+}
+
+/* Dropdown header (clickable toggle area) */
+.filterDropdownHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+/* Dropdown title */
+.filterDropdownTitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+/* Arrow icon button */
+.arrow {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s ease;
+}
+
+/* #endregion */

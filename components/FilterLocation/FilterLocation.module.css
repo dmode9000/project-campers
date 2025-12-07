@@ -1,0 +1,136 @@
+/* ============================================== */
+/* #region Group Container                       */
+/* ============================================== */
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+/* #endregion Group Container */
+
+/* ============================================== */
+/* #region Filter Header                         */
+/* ============================================== */
+
+.filterHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filterHeader h3 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-gray);
+}
+
+/* --- Clear Button --- */
+.clearButton {
+  border: none;
+  background: transparent;
+  color: #e44848;
+  cursor: pointer;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+/* #endregion Filter Header */
+
+/* ============================================== */
+/* #region Input Field                           */
+/* ============================================== */
+
+.inputWrapper {
+  position: relative;
+}
+
+/* Location icon */
+.icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: var(--color-gray);
+  pointer-events: none;
+}
+
+.input {
+  width: 100%;
+  border-radius: 12px;
+  border: none;
+  padding: 10px 14px 10px 42px;
+  /* Extra left padding for icon */
+  font-size: 15px;
+  background-color: var(--color-inputs);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-main);
+}
+
+.input:focus {
+  outline: none;
+  border: 1px solid rgba(15, 23, 42, 0.15);
+}
+
+/* #endregion Input Field */
+
+/* ============================================== */
+/* #region Suggestions Dropdown                  */
+/* ============================================== */
+
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 4px;
+  padding: 0;
+  list-style: none;
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.15);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.suggestionItem {
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  padding: 10px 14px;
+  font-size: 15px;
+  background-color: var(--color-inputs);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.suggestionItem:first-child {
+  border-radius: 12px 12px 0 0;
+}
+
+.suggestionItem:last-child {
+  border-radius: 0 0 12px 12px;
+}
+
+.suggestionItem:only-child {
+  border-radius: 12px;
+}
+
+.suggestionItem:hover {
+  background-color: rgba(171, 171, 171, 0.256);
+}
+
+/* #endregion Suggestions Dropdown */

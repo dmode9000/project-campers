@@ -1,0 +1,61 @@
+import css from './NotFound.module.css';
+import { Metadata } from 'next';
+import Link from 'next/link';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
+
+export const metadata: Metadata = {
+  title: '404 — Сторінку не знайдено | TravelTrucks',
+  description:
+    'На жаль, сторінку не знайдено. Але не хвилюйся — у нас є безліч стильних речей, які чекають на тебе! Перейди на головну та знайди свій новий образ.',
+  openGraph: {
+    title: '404 — Сторінку не знайдено | TravelTrucks',
+    description:
+      'Сторінку не знайдено. Завітай до нашого каталогу модного одягу та знайди те, що пасує саме тобі.',
+    url: 'https://TravelTrucks.com/404',
+    siteName: 'TravelTrucks',
+    images: [
+      {
+        url: '/public/img/metadata/TravelTrucks.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'TravelTrucks 404 - Сторінку не знайдено',
+      },
+    ],
+    locale: 'uk_UA',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '404 — Сторінку не знайдено | TravelTrucks',
+    description:
+      'Мода не зникає! Просто ця сторінка не існує. Перейди на головну та відкрий нові колекції.',
+    images: ['/public/img/metadata/TravelTrucks.jpg'],
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
+
+export default async function NotFound() {
+  const messages = await getMessages({ locale: 'uk' });
+  const t = (key: string) => messages['NotFound'][key];
+
+  return (
+    <div className={css.wrapper}>
+      <div className="container">
+        <div className={css.content}>
+          <NextIntlClientProvider messages={messages}>
+            <h1 className={css.code}>{t('h1')}</h1>
+            <p className={css.message}>{t('oops')}</p>
+            <p className={css.text}>{t('text')}</p>
+            <Link href="/" className={`btn-primary ${css.button}`}>
+              {t('button')}
+            </Link>
+          </NextIntlClientProvider>
+        </div>
+      </div>
+    </div>
+  );
+}

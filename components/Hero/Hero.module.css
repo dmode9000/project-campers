@@ -1,0 +1,92 @@
+/* #region === Section (hero wrapper) === */
+.hero {
+    background-color: #060b0b;
+}
+
+/* #endregion */
+
+/* #region === Container === */
+.container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        height: 696px;
+    }
+}
+
+/* #endregion */
+
+/* #region === Background Image === */
+.hero_bg_image {
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.6;
+}
+
+@media screen and (min-width: 768px) {
+    .hero_bg_image {
+        opacity: 0.85;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .hero_bg_image {
+        opacity: 1;
+    }
+}
+
+/* #endregion */
+
+/* #region === Hero Content === */
+.hero_content {
+    z-index: 10;
+    position: relative;
+    margin-block: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    color: var(--color-white);
+}
+
+/* Text wrapper */
+.text_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Title */
+.hero_title {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 67%;
+    color: var(--color-inputs);
+}
+
+/* Description text */
+.hero_text {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 133%;
+    color: var(--color-inputs);
+}
+
+/* #endregion */
+
+/* #region === Button === */
+.button {
+    padding-inline: 49px;
+}
+
+/* #endregion */
+
+.loaderWrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}

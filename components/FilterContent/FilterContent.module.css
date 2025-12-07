@@ -1,0 +1,240 @@
+/* ============================================== */
+/* #region Container                             */
+/* ============================================== */
+
+.filterContentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+/* #endregion Container */
+
+/* ============================================== */
+/* #region Group                                 */
+/* ============================================== */
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* --- Filter Header --- */
+.filterHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filterHeader h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* --- Clear Button --- */
+.clearButtonInternal {
+  border: none;
+  background: transparent;
+  color: #e44848;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* --- Location Input Wrapper --- */
+.locationInputWrapper {
+  position: relative;
+}
+
+/* --- Input Field --- */
+.input {
+  width: 100%;
+  background-color: var(--color-inputs);
+  border: none;
+  font-size: 16px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  border-radius: 12px;
+  padding: 18px 218px 18px 20px;
+  width: 360px;
+  height: 56px;
+}
+
+/* --- Suggestions Dropdown --- */
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 4px;
+  padding: 0;
+  list-style: none;
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.15);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.suggestionItem {
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.suggestionItem:first-child {
+  border-radius: 12px 12px 0 0;
+}
+
+.suggestionItem:last-child {
+  border-radius: 0 0 12px 12px;
+}
+
+.suggestionItem:only-child {
+  border-radius: 12px;
+}
+
+.suggestionItem:hover {
+  background-color: rgba(228, 72, 72, 0.08);
+}
+
+/* --- Divider --- */
+.divider {
+  border: none;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  margin: 0;
+}
+
+/* #endregion Group */
+
+/* ============================================== */
+/* #region Form List (Vehicle Type)              */
+/* ============================================== */
+
+.formList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
+
+  gap: 8px;
+}
+
+/* --- Form Item Container --- */
+.formItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-width: 95px;
+  min-height: 92px;
+  padding: 12px;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  background-color: var(--color-white);
+  border-radius: 12px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.formItem:hover {
+  border-color: rgba(16, 24, 40, 0.4);
+}
+
+/* --- Form Item Active State --- */
+.formItemActive {
+  border-color: #e44848;
+  background-color: rgba(228, 72, 72, 0.05);
+}
+
+.formItemActive:hover {
+  border-color: #e44848;
+}
+
+/* --- Form Icon --- */
+.formIcon {
+  color: #101828;
+  flex-shrink: 0;
+}
+
+/* --- Form Label --- */
+.formLabel {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  color: #101828;
+}
+
+/* #endregion Form List (Vehicle Type) */
+
+/* ============================================== */
+/* #region Equipment List                        */
+/* ============================================== */
+
+.equipmentList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
+  gap: 8px;
+  gap: 8px;
+}
+
+/* --- Equipment Item Container --- */
+.equipmentItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-width: 95px;
+  min-height: 92px;
+  padding: 12px;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  background-color: var(--color-white);
+  border-radius: 12px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.equipmentItem:hover {
+  border-color: rgba(16, 24, 40, 0.4);
+}
+
+/* --- Equipment Item Active State --- */
+.equipmentItemActive {
+  border-color: var(--color-button);
+}
+
+.equipmentItemActive:hover {
+  border-color: var(--color-button);
+}
+
+/* --- Equipment Icon --- */
+.equipmentIcon {
+  color: #101828;
+  flex-shrink: 0;
+}
+
+/* --- Equipment Label --- */
+.equipmentLabel {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  color: #101828;
+}
+
+/* #endregion Equipment List */

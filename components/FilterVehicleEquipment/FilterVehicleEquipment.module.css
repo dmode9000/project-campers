@@ -1,0 +1,115 @@
+/* ============================================== */
+/* #region Group Container                       */
+/* ============================================== */
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+/* #endregion Group Container */
+
+/* ============================================== */
+/* #region Header                                */
+/* ============================================== */
+
+.filterHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filterHeader h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+
+}
+
+/* --- Clear Button --- */
+.clearButton {
+  border: none;
+  background: transparent;
+  color: #e44848;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+}
+
+/* --- Divider --- */
+.divider {
+  border: none;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  margin: 0;
+}
+
+/* #endregion Header */
+
+/* ============================================== */
+/* #region Equipment List                        */
+/* ============================================== */
+
+.equipmentList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
+  gap: 8px;
+}
+
+/* --- Equipment Item Container --- */
+.equipmentItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-width: 95px;
+  min-height: 92px;
+  padding: 12px;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  background-color: var(--color-white);
+  border-radius: 12px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.equipmentItem:hover {
+  background-color: var(--color-inputs);
+  box-shadow: 5px 5px 10px #f2f2f2,
+    -5px -5px 10px #ffffff;
+}
+
+/* --- Equipment Item Active State --- */
+.equipmentItemActive {
+  border-color: var(--color-button);
+}
+
+.equipmentItemActive:hover {
+  border-color: var(--color-button-hover);
+}
+
+/* --- Equipment Icon --- */
+.equipmentIcon {
+  color: #101828;
+  flex-shrink: 0;
+}
+
+/* --- Equipment Label --- */
+.equipmentLabel {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  color: #101828;
+}
+
+/* #endregion Equipment List */

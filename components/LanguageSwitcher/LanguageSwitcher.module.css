@@ -1,0 +1,48 @@
+/* #region === Language Button === */
+
+.langButton {
+  width: 30px;
+  height: 30px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  font-family: var(--font-family);
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--color-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 250ms ease-in-out, transform 180ms ease;
+  z-index: 999;
+}
+
+/* #endregion */
+
+/* #region === Hover & Active States === */
+
+.langButton:hover {
+  transform: scale(1.2);
+  background: var(--color-gray-light);
+}
+
+.langButton:active {
+  transform: scale(0.95);
+}
+
+/* #endregion */
+
+/* #region === Tablet Responsive (768px+) === */
+
+@media screen and (min-width: 768px) {
+  .langButton {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* #endregion */

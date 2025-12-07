@@ -1,0 +1,50 @@
+/* #region === Sidebar Container === */
+.sidebarContainer {
+  width: 100%;
+}
+
+/* #endregion */
+
+/* #region === Filters Row === */
+.filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+/* #endregion */
+
+/* #region === Filter Item === */
+.filter {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-text);
+}
+
+/* #endregion */
+
+/* #region === Clear Button === */
+.clearButton {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-button);
+}
+
+/* #endregion */
+
+/* #region === Shown Count === */
+.shown {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  margin-bottom: 8px;
+}
+
+/* #endregion */

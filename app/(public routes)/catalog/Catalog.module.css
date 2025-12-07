@@ -1,0 +1,127 @@
+/* #region === Section Container === */
+
+.section {
+  padding-block: 48px;
+}
+
+/* #endregion */
+
+/* #region === Page Title === */
+
+.pageTitle {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  color: var(--color-scheme-4-text);
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .pageTitle {
+    display: none;
+  }
+}
+
+/* #endregion */
+
+/* #region === Heading === */
+
+.heading {
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 32px;
+}
+
+/* #endregion */
+
+/* #region === Main Layout === */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+/* #endregion */
+
+/* #region === Sidebar (Desktop Filters) === */
+
+.sidebar {
+  display: none;
+  min-width: 360px;
+}
+
+/* #endregion */
+
+/* #region === Mobile Filters === */
+
+.mobileFilters {
+  display: block;
+}
+
+/* #endregion */
+
+/* #region === Content Area === */
+
+.contentArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* #endregion */
+
+/* #region === Empty State === */
+
+.emptyState {
+  border-radius: 24px;
+  background: var(--color-surface, #f6f6f6);
+  padding: 48px 32px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.emptyState button {
+  margin-top: 16px;
+}
+
+/* #endregion */
+
+/* #region === Load More Button === */
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+/* Button - uses global .btn-secondary */
+.button {
+  display: block;
+}
+
+/* #endregion */
+
+/* #region === Desktop Responsive (1440px+) === */
+
+@media (min-width: 1440px) {
+  .main {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    display: block;
+    width: 360px;
+  }
+
+  .mobileFilters {
+    display: none;
+  }
+}
+
+/* #endregion */

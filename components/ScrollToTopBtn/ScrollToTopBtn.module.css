@@ -1,0 +1,55 @@
+/* #region === Scroll To Top Button === */
+
+.scrollToTopBtn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  background: conic-gradient(var(--color-gray-light) 0%, var(--color-badges) 0%);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+/* Активний стан (показати кнопку) */
+.scrollToTopBtn.show {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 9999;
+}
+
+/* #endregion */
+
+/* #region === Scroll Up Icon === */
+.scrollUpIcon {
+  stroke: #000;
+  fill: #000;
+}
+
+/* #endregion */
+
+/* #region === Tablet Responsive (768px+) === */
+@media (min-width: 768px) {
+  .scrollToTopBtn {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Ховер/активний стан на великому екрані */
+  .scrollToTopBtn.show:hover,
+  .scrollToTopBtn.show:active {
+    transform: scale(1.5);
+  }
+}
+
+/* #endregion */

@@ -1,0 +1,181 @@
+/* #region === Section (header wrapper) === */
+.section {
+  background-color: var(--color-inputs);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-badges);
+}
+
+/* #endregion */
+
+/* #region === Header container === */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* #endregion */
+
+/* #region === Logo === */
+.logoLink {
+  display: block;
+  transition: all 250ms ease-in-out;
+}
+
+.logoLink:hover {
+  opacity: 0.8;
+}
+
+.logoLink svg {
+  width: 136px;
+  height: 16px;
+  display: block;
+}
+
+
+
+
+/* #endregion */
+
+/* #region === Responsive visibility === */
+.mobileOnly {
+  display: block;
+}
+
+.desktopOnly {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mobileOnly {
+    display: none;
+  }
+
+  .desktopOnly {
+    display: block;
+    width: 50%;
+  }
+}
+
+/* #endregion */
+
+/* #region === Mobile Navigation === */
+
+/* Burger button container */
+.mobileButtons {
+  display: flex;
+}
+
+/* Burger button */
+.burgerButton {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 100px;
+  width: 36px;
+  height: 36px;
+  background-color: var(--color-button);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.buttonSvg {
+  fill: var(--color-inputs);
+}
+
+/* Mobile menu dropdown */
+.mobileMenu {
+  position: fixed;
+  top: 72px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 72px);
+  background-color: var(--color-gray-light);
+  z-index: 1001;
+  animation: slideDown 0.4s ease forwards;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile navigation list */
+.navigationMobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mobile navigation item */
+.navigationItemMobile {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-top: 32px;
+  color: var(--color-main);
+  transition: color 0.3s ease-in-out;
+}
+
+/* Active mobile navigation item */
+.navigationItemMobile.active {
+  color: var(--color-button);
+}
+
+/* #endregion */
+
+/* #region === Desktop Navigation === */
+
+/* Navigation list */
+.navigation {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 32px;
+}
+
+.navigation :last-child {
+  margin-left: auto;
+}
+
+/* Navigation item */
+.navigationItem {
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--color-main);
+  transition: color 0.3s ease-in-out;
+}
+
+.navigationItem:hover,
+.navigationItem:active {
+  color: var(--color-button-hover);
+}
+
+/* Active navigation item */
+.navigationItem.active {
+  color: var(--color-button);
+}
+
+/* Navigation link */
+.navigationLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* #endregion */

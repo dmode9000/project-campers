@@ -1,0 +1,246 @@
+/* #region === Card Container === */
+.card {
+
+  padding: 44px;
+}
+
+/* #endregion */
+
+/* #region === Header (Title & Subtitle) === */
+.title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--main);
+
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-gray);
+  margin-bottom: 24px;
+}
+
+/* #endregion */
+
+/* #region === Form Layout === */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* #endregion */
+
+/* #region === Form Fields === */
+
+/* Label wrapper */
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 500;
+}
+
+/* Input and Textarea */
+.input,
+.textarea {
+  border-radius: 12px;
+  width: 100%;
+  /* border: 1px solid rgba(15, 23, 42, 0.15); */
+  font-size: 15px;
+  background-color: var(--color-inputs);
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border: none;
+  color: var(--color-main);
+  background-color: var(--color-inputs);
+}
+
+/* Textarea specific */
+.textarea {
+  resize: vertical;
+}
+
+/* #endregion */
+
+/* #region === Status Messages === */
+
+/* Error message */
+.error {
+  color: var(--color-button);
+  font-size: 13px;
+}
+
+/* Success message */
+.success {
+  color: var(--color-main);
+  font-weight: 400;
+  text-align: center;
+}
+
+/* #endregion */
+
+/* #region === Submit Button === */
+/* Submit button - uses global .btn-primary */
+.submit {
+  margin-top: 10px;
+  margin-inline: auto;
+}
+
+/* #endregion */
+
+/* #region === DatePicker Customization === */
+
+/* DatePicker wrapper - full width */
+.label :global(.react-datepicker-wrapper) {
+  width: 100%;
+}
+
+/* DatePicker calendar popup */
+.label :global(.react-datepicker) {
+  font-family: var(--font-family);
+  border: 1px solid var(--color-text);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.label :global(.react-datepicker__tab-loop) {
+  margin-bottom: -6px;
+}
+
+
+.label :global(.react-datepicker__month-container) {
+  display: block;
+}
+
+.label :global(.react-datepicker__month) {
+  padding: 12px;
+  margin: 0;
+}
+
+/* Calendar header */
+.label :global(.react-datepicker__header) {
+  background: white;
+  border-bottom: none;
+  padding-block: 12px;
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Month/Year title */
+.label :global(.react-datepicker__current-month) {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--color-main);
+  /* margin-bottom: 12px; */
+  line-height: 120%;
+}
+
+
+.label :global(.react-datepicker__day-names) {
+  border-bottom: 1px solid var(--color-text);
+  margin: 0;
+
+}
+
+/* Day names (MON, TUE, etc.) */
+.label :global(.react-datepicker__day-name) {
+  color: var(--color-gray);
+  text-transform: capitalize;
+  text-transform: uppercase;
+
+  width: 32px;
+  margin: 0px;
+  margin-bottom: 12px;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 120%;
+  text-align: center;
+  color: var(--text);
+
+  color: var(--color-text);
+}
+
+.label :global(.react-datepicker__day-name>span) {
+  display: inline;
+}
+
+/* Individual day cells */
+.label :global(.react-datepicker__day) {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  margin: 0px;
+  border-radius: 50%;
+  color: var(--color-main);
+  font-size: 14px;
+}
+
+.label :global(.react-datepicker__week) {
+  display: flex;
+}
+
+/* Day hover state */
+.label :global(.react-datepicker__day:hover) {
+  background: var(--color-badges);
+  border-radius: 50%;
+}
+
+/* Selected day */
+.label :global(.react-datepicker__day--selected) {
+  background: var(--color-main);
+  color: white;
+  border-radius: 50%;
+}
+
+/* Today */
+.label :global(.react-datepicker__day--today) {
+  font-weight: 600;
+}
+
+/* Days outside current month */
+.label :global(.react-datepicker__day--outside-month) {
+  color: var(--color-gray);
+  opacity: 0.5;
+}
+
+/* Disabled days */
+.label :global(.react-datepicker__day--disabled) {
+  color: var(--color-gray);
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Navigation arrows */
+.label :global(.react-datepicker__navigation) {
+  top: 6px;
+}
+
+.label :global(.react-datepicker__navigation--next) {
+  right: 11px
+}
+
+.label :global(.react-datepicker__navigation--previous) {
+  left: 11px
+}
+
+.label :global(.react-datepicker__navigation-icon::before) {
+  border-color: var(--color-main);
+}
+
+.label :global(.react-datepicker__triangle) {
+  stroke: var(--color-text);
+}
+
+
+/* #endregion */
