@@ -6,10 +6,10 @@ import css from './LanguageSwitcher.module.css';
 
 export default function LanguageToggleButton() {
   const router = useRouter();
-  const [locale, setLocale] = useState('uk');
+  const [locale, setLocale] = useState('en');
 
   useEffect(() => {
-    const stored = localStorage.getItem('locale') || 'uk';
+    const stored = localStorage.getItem('locale') || 'en';
     setLocale(stored);
   }, []);
 
